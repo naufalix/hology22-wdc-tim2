@@ -1,0 +1,74 @@
+/**
+ * Color scheme
+ */
+$theme-colors: (
+        "primary": #1da1f2,
+        "info": #cdcdcd,
+        "dark": #454545,
+        "black": #000000,
+);
+
+// Import Bootstrap and its default variables
+@import '../../../node_modules/bootstrap/scss/bootstrap';
+
+body {
+  background-color: black;
+}
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) {
+  body {
+    background-color: white;
+  }
+
+  .container-iphone {
+    margin: 0 auto;
+    padding: 120px 140px 120px 140px;
+    width: 707px;
+    height: 1000px;
+    background-image: url('../img/iphone-6-gold.jpg');
+  }
+}
+
+textarea {
+  background-color: black;
+  color: #fff;
+
+  border: none;
+  overflow: auto;
+  outline: none;
+
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+
+  resize: none;
+}
+
+.btn-icon {
+  margin: 1.2rem !important;
+}
+
+.tooltip-danger.bs-tooltip-top > .arrow:before {
+  border-top-color: $danger;
+}
+
+.tooltip-danger.bs-tooltip-right > .arrow:before {
+  border-right-color: $danger;
+}
+
+.tooltip-danger.bs-tooltip-bottom > .arrow:before {
+  border-bottom-color: $danger;
+}
+
+.tooltip-danger.bs-tooltip-left > .arrow:before {
+  border-left-color: $danger;
+}
+
+.tooltip-danger > .tooltip-inner {
+  background-color: $danger;
+}
+
+.btn-primary {
+  border-radius: 9999px;
+}
