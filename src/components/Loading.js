@@ -6,7 +6,7 @@ function Loading(){
   return (
     <div className="container loading">
       <div className="row">
-        <div className="col-12">
+        <div className="col-12 text-center text-white">
           <FontAwesomeIcon icon={faSpinner} spin/>
         </div>
       </div>
