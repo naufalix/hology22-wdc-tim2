@@ -18,6 +18,20 @@ import Home from './pages/Home';
 import Login from './pages/Login';
 import Logout from './pages/Logout';
 
+//FIREBASE
+//import firebase from 'firebase/app';
+import firebase from 'firebase/compat/app';
+require('firebase/auth');
+require('firebase/firestore');
+firebase.initializeApp({
+  apiKey: "AIzaSyCvYOHs846QkQnQREpJBmOrbA4lIo4n6cM",
+  authDomain: "twitter-clone-b07eb.firebaseapp.com",
+  projectId: "twitter-clone-b07eb",
+  storageBucket: "twitter-clone-b07eb.appspot.com",
+  messagingSenderId: "407846582848",
+  appId: "1:407846582848:web:f9382f5f62e1cb20417da5"
+});
+
 const router = createBrowserRouter([
   {path: "/compose",element: <Compose/>,},
   {path: "/login",element: <Login/>,},
