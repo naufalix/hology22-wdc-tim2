@@ -3,12 +3,20 @@ import Loading from '../components/Loading';
 //import {Redirect} from 'react-router-dom';
 import { Navigate } from 'react-router-dom';
 
+//FIREBASE
+//import firebase from 'firebase/app';
+//import firebase from 'firebase/compat/app';
+//require('firebase/compat/auth');
+// import { getAuth } from 'firebase/auth'
+// const auth = getAuth()
+
 class Compose extends React.Component{
   constructor(props){
     super(props);
 
     this.user    = null;
     this.loading = true;
+    //this.auth  = firebase.auth();
 
     this.state = {
       value: '',
@@ -19,7 +27,7 @@ class Compose extends React.Component{
   }
 
   componentDidMount(){
-    this.props.firebase.auth.onAuthStateChanged(user => {
+    this.props.firebase.auth().onAuthStateChanged(user => {
       this.loading = false;
       if(user){
         this.user = user;
